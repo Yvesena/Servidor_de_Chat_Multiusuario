@@ -1,0 +1,26 @@
+
+Estrutura do projeto
+chat-multiuser/
+│
+├── src/                       # Código-fonte (.c/.cpp)
+│   ├── main_server.c           # Função main do servidor
+│   ├── client.c                # Programa cliente em C/C++
+│   ├── server.c                # Funções para iniciar socket e aceitar conexões
+│   ├── client_handler.c        # Lógica da thread que atende cada cliente
+│   ├── monitor.c               # Implementação do monitor (lista de clientes protegida)
+│   └── logging.c               # Wrapper para libtslog
+│
+├── include/                   # Headers (arquivos de interface)
+│   ├── server.h
+│   ├── client_handler.h
+│   ├── monitor.h
+│   ├── logging.h
+│   ├── common.h               # Constantes, structs e mensagens comuns
+│   └── config.h               # Porta padrão, tamanho de buffer etc.
+│
+├── logs/
+│   └── chat.log               # Arquivo de log gerado pelo libtslog
+│
+├── Makefile                   # Para compilar o projeto
+└── README.md                  # Instruções de uso
+
